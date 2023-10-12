@@ -2,14 +2,15 @@ package pageObjects.nopCommerce;
 
 import org.openqa.selenium.WebDriver;
 
-import commons.BasePage;
+import commons.DynamicMethodsNopCommerce;
 import commons.PageGeneratorNopCommerce;
 import pageUIs.nopCommerce.HomePageUI;
 
-public class HomePageObject extends BasePage {
+public class HomePageObject extends DynamicMethodsNopCommerce {
 	private WebDriver driver;
 
 	public HomePageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
