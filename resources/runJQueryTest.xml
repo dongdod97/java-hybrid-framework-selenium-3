@@ -4,7 +4,7 @@
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.jquery.user.Level_07_Web_Table_Dynamic" />
+			<class name="com.jquery.user.Level_08_Upload_File" />
 		</classes>
 	</test>
 

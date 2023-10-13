@@ -312,6 +312,16 @@ public class BasePage {
 		driver.switchTo().defaultContent();
 	}
 
+	protected void uploadFile(WebDriver driver, String... fileNames) {
+		String uploadFileFolderPath = GlobalConstants.UPLOAD_FILE_FOLDER_PATH;
+		String filePath = "";
+		for (String fileName : fileNames) {
+			filePath = filePath + uploadFileFolderPath + fileName + "\n";
+		}
+		filePath = filePath.trim();
+		getWebElement(driver, "//input[@type='file']").sendKeys(filePath);
+	}
+
 	// Actions methods
 
 	protected void hoverMouseToElement(WebDriver driver, String xpathLocator) {
