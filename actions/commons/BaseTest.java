@@ -3,6 +3,8 @@ package commons;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -11,6 +13,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	private WebDriver driver;
+	protected final Logger log = LogManager.getLogger(getClass());
+
+	public WebDriver getDriver() {
+		return driver;
+	}
 
 	protected WebDriver getBrowserDriver(String browserName, String appUrl) {
 		switch (browserName) {
@@ -40,10 +47,12 @@ public class BaseTest {
 		boolean verify = true;
 		try {
 			Assert.assertTrue(condition);
+			log.info("---------------------- PASSED ----------------------");
 		} catch (Throwable e) {
 			verify = false;
 			VerificationFailures.getFailures().addFailuresForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);
+			log.info("---------------------- FAILED ----------------------");
 		}
 		return verify;
 	}
@@ -52,10 +61,12 @@ public class BaseTest {
 		boolean verify = true;
 		try {
 			Assert.assertFalse(condition);
+			log.info("---------------------- PASSED ----------------------");
 		} catch (Throwable e) {
 			verify = false;
 			VerificationFailures.getFailures().addFailuresForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);
+			log.info("---------------------- FAILED ----------------------");
 		}
 		return verify;
 	}
@@ -64,10 +75,12 @@ public class BaseTest {
 		boolean verify = true;
 		try {
 			Assert.assertEquals(actual, expected);
+			log.info("---------------------- PASSED ----------------------");
 		} catch (Throwable e) {
 			verify = false;
 			VerificationFailures.getFailures().addFailuresForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);
+			log.info("---------------------- FAILED ----------------------");
 		}
 		return verify;
 	}
