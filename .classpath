@@ -46,5 +46,12 @@
 	<classpathentry kind="lib" path="libExtentReports/lombok-1.18.30.jar"/>
 	<classpathentry kind="lib" path="libExtentReports/reactive-streams-1.0.4.jar"/>
 	<classpathentry kind="lib" path="libExtentReports/rxjava-3.1.8.jar"/>
+	<classpathentry kind="lib" path="libAllureReports/allure-java-commons-2.24.0.jar"/>
+	<classpathentry kind="lib" path="libAllureReports/allure-model-2.24.0.jar"/>
+	<classpathentry kind="lib" path="libAllureReports/allure-test-filter-2.24.0.jar"/>
+	<classpathentry kind="lib" path="libAllureReports/allure-testng-2.24.0.jar"/>
+	<classpathentry kind="lib" path="libAllureReports/aspectjrt-1.9.20.1.jar"/>
+	<classpathentry kind="lib" path="libAllureReports/aspectjtools-1.9.20.1.jar"/>
+	<classpathentry kind="lib" path="libAllureReports/aspectjweaver-1.9.20.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

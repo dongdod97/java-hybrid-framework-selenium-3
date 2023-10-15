@@ -20,5 +20,6 @@ public class GlobalConstants {
 	public static final String PROJECT_PATH = System.getProperty("user.dir");
 	public static final String UPLOAD_FILE_FOLDER_PATH = PROJECT_PATH + File.separator + "uploadFile" + File.separator;
 	public static final String EXTENT_REPORTS_OUTPUT_FOLDER_PATH = PROJECT_PATH + File.separator + "extentReports-output" + File.separator;
+	public static final String ALLURE_REPORTS_OUTPUT_FOLDER_PATH = PROJECT_PATH + File.separator + "allure-results";
 
 }

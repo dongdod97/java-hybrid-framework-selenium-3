@@ -2,7 +2,7 @@
 <suite parallel="false" name="NopCommerce">
 
 	<listeners>
-		<listener class-name="reportConfig.ExtentTestListener" />
+		<listener class-name="reportConfig.AllureTestListener" />
 	</listeners>
 
 	<parameter name="url" value="https://demo.nopcommerce.com/" />
@@ -10,7 +10,7 @@
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.nopcommerce.user.Level_11_Extent_Reports" />
+			<class name="com.nopcommerce.user.Level_12_Allure_Patterns" />
 		</classes>
 	</test>
 
